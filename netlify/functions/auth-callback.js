@@ -31,7 +31,7 @@ exports.handler = async (event) => {
   }
 
   const access_token = tokenJson.access_token;
-  const redirectTo = `/admin/#access_token=${encodeURIComponent(access_token)}&token_type=bearer`;
+  const redirectTo = `/admin/#access_token=${encodeURIComponent(access_token)}&token_type=Bearer&provider=github`;
 
   return {
     statusCode: 302,
