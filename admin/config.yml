@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://rentwroomltd.netlify.app"
+
+collections:
+  - name: "fleet"
+    label: "Fleet (Cars)"
+    folder: "content/fleet"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Car Name", name: "title", widget: "string" }
+      - { label: "Price per day", name: "price", widget: "number", value_type: "int", min: 0 }
+      - { label: "Transmission", name: "transmission", widget: "select", options: ["Automatic", "Manual"] }
+      - { label: "Fuel", name: "fuel", widget: "select", options: ["Petrol", "Diesel", "Hybrid", "Electric"] }
+      - { label: "Seats", name: "seats", widget: "number", value_type: "int", min: 1 }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Active", name: "active", widget: "boolean", default: true }
+      - { label: "Description", name: "body", widget: "markdown", required: false }
