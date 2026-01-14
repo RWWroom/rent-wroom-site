@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_USERNAME/YOUR_REPO
+  repo: RWWroom/rent-wroom-site
   branch: main
   base_url: https://rentwroomltd.netlify.app
   auth_endpoint: /.netlify/functions/auth
